@@ -52,7 +52,30 @@ substitutions = {
     "VirtualKeyboardWidth": 17*62+50,  # 860
     "VirtualKeyboardKeyWidth": 62,  # 50
     "VirtualNumpadWidth": 450,  # ?
-}
+
+    "OSDBookmarksWidth": 1000,  # 800
+    "OSDBookmarksItemHeight": 238,  # 215
+    "OSDSettingsWidth": 1000,  # 800
+    "OSDSeekSliderWidth": 670,  # 720
+    "OSDSubtitleMenuWidth": 356,  # 256
+
+    # Dimensions of Seek bar region
+    "DialogSeekBarWidth": 390,  # 370
+    "DialogSeekBarHeight": 90,  # 70
+    # The bar length
+    "DialogSeekBarWidth2": 340,  # 240
+
+    "FullScreenExtraHeight": 34,  # 0
+
+    "MyPVRChannelsLeftExtraWidth": 100,  # 0
+    "MyPVRChannelsLeftItemHeight": 80,  # ?
+    "MyPVRChannelsPreviewHeight": 300, # 400
+    "MyPVRChannelsRightExtraHeight": 54, # 0
+    }
+
+substitutions["OSDBookmarksItemWidth"] = int(
+    (substitutions["OSDBookmarksWidth"] - 2*40)/3)
+
 
 # Finally, extend by other dicts here
 map(lambda x: substitutions.update(x), [])
